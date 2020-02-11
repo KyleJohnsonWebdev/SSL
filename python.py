@@ -25,7 +25,7 @@ def userGradeLetter(g):
 #Create a class "Grader"
 class Grader:
     def student_instance(self):
-        print("The curent student is " + self.name + ", you got a " + self.grade + " on the " + self.assignment + ".")
+        print("The current student is " + self.name + ", you got a " + self.grade + " on the " + self.assignment + " assignment.")
 
 
 #Create a grader
