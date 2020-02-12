@@ -43,13 +43,13 @@ end
 g = grade.to_f
 letter = nil
 case g
-when 0..59
+when 0..59.99
   letter = "F"
-when 60..69
+when 60..69.99
   letter = "D"
-when 70..79
+when 70..79.99
   letter = "C"
-when 80..89
+when 80..89.99
   letter = "B"
 when 90..110
   letter = "A"
