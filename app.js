@@ -20,7 +20,7 @@ http.createServer(function (req, res){
 
 
     res.writeHead(200);
-    res.write("<script> var highlighted = 'magenta';var one = 'test';var two = 'index';var three = 'about';</script>")
+    res.write("<script> var highlighted = 'magenta';var test = 'test';var index = 'index';var about = 'about';</script>")
 
     res.end(data);
   })
