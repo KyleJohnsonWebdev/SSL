@@ -20,8 +20,8 @@ http.createServer(function (req, res){
 
 
     res.writeHead(200);
-    res.write("<script> var highlighted = 'magenta';</script>")
-    
+    res.write("<script> var highlighted = 'magenta';var one = 'test';var two = 'index';var three = 'about';</script>")
+
     res.end(data);
   })
 
