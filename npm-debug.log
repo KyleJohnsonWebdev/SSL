@@ -1,9 +1,9 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', '-g', 'n' ]
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', '-g', 'ejs' ]
 2 info using npm@1.3.10
 3 info using node@v0.10.25
-4 verbose cache add [ 'n', null ]
-5 verbose cache add name=undefined spec="n" args=["n",null]
+4 verbose cache add [ 'ejs', null ]
+5 verbose cache add name=undefined spec="ejs" args=["ejs",null]
 6 verbose parsed url { protocol: null,
 6 verbose parsed url   slashes: null,
 6 verbose parsed url   auth: null,
@@ -13,31 +13,31 @@
 6 verbose parsed url   hash: null,
 6 verbose parsed url   search: null,
 6 verbose parsed url   query: null,
-6 verbose parsed url   pathname: 'n',
-6 verbose parsed url   path: 'n',
-6 verbose parsed url   href: 'n' }
-7 silly lockFile d1854cae-n n
-8 verbose lock n /home/vagrant/.npm/d1854cae-n.lock
-9 silly lockFile d1854cae-n n
-10 silly lockFile d1854cae-n n
-11 verbose addNamed [ 'n', '' ]
+6 verbose parsed url   pathname: 'ejs',
+6 verbose parsed url   path: 'ejs',
+6 verbose parsed url   href: 'ejs' }
+7 silly lockFile 75eeca8f-ejs ejs
+8 verbose lock ejs /home/vagrant/.npm/75eeca8f-ejs.lock
+9 silly lockFile 75eeca8f-ejs ejs
+10 silly lockFile 75eeca8f-ejs ejs
+11 verbose addNamed [ 'ejs', '' ]
 12 verbose addNamed [ null, '*' ]
-13 silly lockFile 6b58d7dc-n n@
-14 verbose lock n@ /home/vagrant/.npm/6b58d7dc-n.lock
-15 silly addNameRange { name: 'n', range: '*', hasData: false }
-16 verbose url raw n
-17 verbose url resolving [ 'https://registry.npmjs.org/', './n' ]
-18 verbose url resolved https://registry.npmjs.org/n
-19 info trying registry request attempt 1 at 13:06:28
-20 http GET https://registry.npmjs.org/n
+13 silly lockFile bcdf6e5f-ejs ejs@
+14 verbose lock ejs@ /home/vagrant/.npm/bcdf6e5f-ejs.lock
+15 silly addNameRange { name: 'ejs', range: '*', hasData: false }
+16 verbose url raw ejs
+17 verbose url resolving [ 'https://registry.npmjs.org/', './ejs' ]
+18 verbose url resolved https://registry.npmjs.org/ejs
+19 info trying registry request attempt 1 at 18:36:15
+20 http GET https://registry.npmjs.org/ejs
 21 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
-22 info trying registry request attempt 2 at 13:06:38
-23 http GET https://registry.npmjs.org/n
+22 info trying registry request attempt 2 at 18:36:26
+23 http GET https://registry.npmjs.org/ejs
 24 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
-25 info trying registry request attempt 3 at 13:07:38
-26 http GET https://registry.npmjs.org/n
-27 silly lockFile 6b58d7dc-n n@
-28 silly lockFile 6b58d7dc-n n@
+25 info trying registry request attempt 3 at 18:37:26
+26 http GET https://registry.npmjs.org/ejs
+27 silly lockFile bcdf6e5f-ejs ejs@
+28 silly lockFile bcdf6e5f-ejs ejs@
 29 error Error: CERT_UNTRUSTED
 29 error     at SecurePair.<anonymous> (tls.js:1370:32)
 29 error     at SecurePair.EventEmitter.emit (events.js:92:17)
@@ -54,7 +54,7 @@
 30 error or email it to:
 30 error     <npm-@googlegroups.com>
 31 error System Linux 3.13.0-170-generic
-32 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "n"
+32 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "ejs"
 33 error cwd /var/www/html
 34 error node -v v0.10.25
 35 error npm -v 1.3.10

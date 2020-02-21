@@ -1,0 +1,27 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+      <div>
+        <li class="nav-item active">
+          <% if (pagename=="Home"){%>
+            <a class="nav-link h2" style="color:orange" href="/">Home</a>
+          <%}else{%>
+            <a class="nav-link h2" href="/" >Home</a>
+          <%}%>
+
+          <% if (pagename=="About"){%>
+            <a class="nav-link h2" style="color:orange" href="/about">About</a>
+          <%}else{%>
+            <a class="nav-link h2" href="/about">About</a>
+          <%}%>
+        </li>
+      </div>
+      </ul>
+    </div>
+  </div>
+</nav>
