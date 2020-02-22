@@ -1,9 +1,13 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', '-g', 'ejs' ]
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'express-session' ]
 2 info using npm@1.3.10
 3 info using node@v0.10.25
-4 verbose cache add [ 'ejs', null ]
-5 verbose cache add name=undefined spec="ejs" args=["ejs",null]
+4 verbose cache add [ 'express-session', null ]
+5 verbose cache add name=undefined spec="express-session" args=["express-session",null]
 6 verbose parsed url { protocol: null,
 6 verbose parsed url   slashes: null,
 6 verbose parsed url   auth: null,
@@ -13,31 +17,31 @@
 6 verbose parsed url   hash: null,
 6 verbose parsed url   search: null,
 6 verbose parsed url   query: null,
-6 verbose parsed url   pathname: 'ejs',
-6 verbose parsed url   path: 'ejs',
-6 verbose parsed url   href: 'ejs' }
-7 silly lockFile 75eeca8f-ejs ejs
-8 verbose lock ejs /home/vagrant/.npm/75eeca8f-ejs.lock
-9 silly lockFile 75eeca8f-ejs ejs
-10 silly lockFile 75eeca8f-ejs ejs
-11 verbose addNamed [ 'ejs', '' ]
+6 verbose parsed url   pathname: 'express-session',
+6 verbose parsed url   path: 'express-session',
+6 verbose parsed url   href: 'express-session' }
+7 silly lockFile 6ca9c35e-express-session express-session
+8 verbose lock express-session /home/vagrant/.npm/6ca9c35e-express-session.lock
+9 silly lockFile 6ca9c35e-express-session express-session
+10 silly lockFile 6ca9c35e-express-session express-session
+11 verbose addNamed [ 'express-session', '' ]
 12 verbose addNamed [ null, '*' ]
-13 silly lockFile bcdf6e5f-ejs ejs@
-14 verbose lock ejs@ /home/vagrant/.npm/bcdf6e5f-ejs.lock
-15 silly addNameRange { name: 'ejs', range: '*', hasData: false }
-16 verbose url raw ejs
-17 verbose url resolving [ 'https://registry.npmjs.org/', './ejs' ]
-18 verbose url resolved https://registry.npmjs.org/ejs
-19 info trying registry request attempt 1 at 18:36:15
-20 http GET https://registry.npmjs.org/ejs
+13 silly lockFile 03cac062-express-session express-session@
+14 verbose lock express-session@ /home/vagrant/.npm/03cac062-express-session.lock
+15 silly addNameRange { name: 'express-session', range: '*', hasData: false }
+16 verbose url raw express-session
+17 verbose url resolving [ 'https://registry.npmjs.org/', './express-session' ]
+18 verbose url resolved https://registry.npmjs.org/express-session
+19 info trying registry request attempt 1 at 17:49:29
+20 http GET https://registry.npmjs.org/express-session
 21 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
-22 info trying registry request attempt 2 at 18:36:26
-23 http GET https://registry.npmjs.org/ejs
+22 info trying registry request attempt 2 at 17:49:39
+23 http GET https://registry.npmjs.org/express-session
 24 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
-25 info trying registry request attempt 3 at 18:37:26
-26 http GET https://registry.npmjs.org/ejs
-27 silly lockFile bcdf6e5f-ejs ejs@
-28 silly lockFile bcdf6e5f-ejs ejs@
+25 info trying registry request attempt 3 at 17:50:39
+26 http GET https://registry.npmjs.org/express-session
+27 silly lockFile 03cac062-express-session express-session@
+28 silly lockFile 03cac062-express-session express-session@
 29 error Error: CERT_UNTRUSTED
 29 error     at SecurePair.<anonymous> (tls.js:1370:32)
 29 error     at SecurePair.EventEmitter.emit (events.js:92:17)
@@ -54,7 +58,7 @@
 30 error or email it to:
 30 error     <npm-@googlegroups.com>
 31 error System Linux 3.13.0-170-generic
-32 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "ejs"
+32 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "express-session"
 33 error cwd /var/www/html
 34 error node -v v0.10.25
 35 error npm -v 1.3.10

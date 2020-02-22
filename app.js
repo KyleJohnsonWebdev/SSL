@@ -23,28 +23,52 @@ const router = express.Router();
 //set the view engine to ejs
 app.set("view engine", "ejs");
 app.engine("ejs", require("ejs").__express);
+const session = require("express-session");
 
+app.use(session({
+  secret:"secret",saveUnitialized:true, resave:true
+}));
+
+var sess;
 //index page
 router.get("/", function(req,res){
-
-  res.render("index", {pagename:"Home"})
-})
+  sess = req.session;
+  res.render("index", {pagename:"Home", sess:sess});
+});
 
 //about page
 router.get("/about",function(req, res){
-
-  res.render("about", {pagename:"About"})
-
-})
+  sess = req.session;
+  res.render("about", {pagename:"About", sess:sess});
+});
 //about page
 router.get("/congrats",function(req, res){
 
   res.render("congrats", {pagename:"Congrats"})
 
 })
+router.get("/profile",function(req,res){
+  sess = req.session;
+  if(typeof(sess)=="undefined" || sess.loggedin != true){
+    var errors = ["Not an authenticated user"];
+    res.render("index", {pagename:"Home", errors:errors})
+  }else{
+    res.render("profile", {pagename:"Profile", sess:sess})
+  }
+})
+
+router.get("/logout", function(req,res){
+  sess = req.session;
+  sess.destroy(function(err){
+
+    res.redirect("/");
+  })
+
+  })
+
 
 //login when the url post information
-router.post("/registration", function(req,res){
+router.post("/login", function(req,res){
   console.log(req.body.email);
   console.log(req.body.password);
   var errors = [];
@@ -102,12 +126,22 @@ router.post("/registration", function(req,res){
   }else{
     success.push("success")
   }
+  if(req.body.email !="Mike@aol.com"){
+    errors.push("Email you entered is not on file.")
+  }else{
+    success.push("success")
+  }
   if(req.body.password ==""){
     errors.push("Password is required")
   }else{
     success.push("success")
   }
-  if(!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(req.body.password)){
+  if(req.body.password !="abc123"){
+    errors.push("Password you entered is not on file.")
+  }else{
+    success.push("success")
+  }
+  if(!/^[a-zA-z]\w{3,14}$/.test(req.body.password)){
     errors.push("Password is not valid.")
   }else{
     success.push("success")
@@ -123,8 +157,10 @@ router.post("/registration", function(req,res){
     success.push("success")
   }
 console.log(success);
-  if(success.length == 14){
-    res.render("congrats", {pagename:"Congrats"})
+  if(success.length == 16){
+    sess= req.session;
+    sess.loggedin = true;
+    res.render("profile", {pagename:"Profile", sess:sess})
   }else{
     res.render("index", {pagename:"Home", errors:errors})
   }

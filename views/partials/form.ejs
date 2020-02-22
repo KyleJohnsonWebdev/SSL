@@ -2,7 +2,15 @@
 <div class="card-body">
   <!--convert it to a registration form-->
   <!--Create all the required input fields-->
-<form action="/registration" method="POST" name="user">
+
+<div class="container">
+  <% if(typeof(errors)!="undefined"){%>
+    <% for(x in errors){%>
+      <div class="alert alert-danger" role="alert"><%=errors[x]%></div>
+    <%}%>
+  <%}%>
+</div>
+<form action="/login" method="POST" name="user">
     <div class="form-group text-dark">
       <label for="firstname">First Name</label>
       <input type="text" name="firstname" class="form-control" aria-describedby="firstName">
